@@ -1,4 +1,4 @@
-function extendHex(shortHex) {
+const extendHex = (shortHex) => {
   // Remove the # symbol if present
   shortHex = shortHex.replace("#", "");
 
@@ -10,4 +10,8 @@ function extendHex(shortHex) {
 
   // Add the # symbol and return the full hex code
   return "#" + fullHex.toUpperCase();
-}
+};
+
+// Do not change the code below.
+const shortHex = prompt("Enter Short Hex.");
+alert(extendHex(shortHex));
