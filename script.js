@@ -1,7 +1,13 @@
-const extendHex = (shortHex) => {
-  // write your code here
-};
+function extendHex(shortHex) {
+  // Remove the # symbol if present
+  shortHex = shortHex.replace("#", "");
 
-// Do not change the code below.
-const shortHex = prompt("Enter Short Hex.");
-alert(extendHex(shortHex));
+  // Expand short hex to full hex
+  const fullHex = shortHex
+    .split("")
+    .map((char) => char.repeat(2))
+    .join("");
+
+  // Add the # symbol and return the full hex code
+  return "#" + fullHex.toUpperCase();
+}
